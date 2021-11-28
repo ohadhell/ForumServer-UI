@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<script> alert("UserName is taken, please try another one")</script>
+<html>
+<body
+background="landscape.jpg">
+UserName:<br>
+<input type="text" id="Uname2" value=""><br>
+PassWord:<br> 
+<input type="password" id="Psw2" value=""><br>
+
+<button onclick="myFunction1()">Login</button>
+<h1 style="color:black; position: absolute; top: 30px; left: 200px;">Login</h1>
+<h1 style="color:black; position: absolute; top: 180px; left: 200px;">Register</h1>
+
+<script>
+function myFunction() {
+	if (document.getElementById("Psw").value==document.getElementById("Psw1").value) {
+	var encodedData4 = window.btoa(document.getElementById("Psw").value);
+	var encodedData3 = window.btoa(document.getElementById("Uname").value);
+	data=""
+    data="F="+document.getElementById("Fname").value+"E="+document.getElementById("Email").value+"U="+encodedData3+"P="+encodedData4;
+	window.open("http://192.168.1.56:8080/"+data, "_self")
+	}
+	
+	else{
+	alert("passwords does not match")}
+	
+}
+</script>
+
+</body>
+</html>
+
+<html>
+<body>
+<p> </p>
+Full Name:<br>
+<input type="text" id="Fname" value=""><br>
+Email:<br> 
+<input type="email" id="Email" value=""><br>
+UserName:<br>
+<input type="text" id="Uname" value=""><br>
+PassWord:<br> 
+<input type="password" id="Psw" value=""><br>
+Confirm PassWord:<br> 
+<input type="password" id="Psw1" value=""><br><br>
+
+<button onclick="myFunction()">Register</button><br>
+
+
+
+<script>
+function myFunction1() {
+	var encodedData2 = window.btoa(document.getElementById("Psw2").value);
+	var encodedData1 = window.btoa(document.getElementById("Uname2").value);
+	data=""
+    data="U="+encodedData1+"P="+encodedData2;
+	window.open("http://192.168.1.56:8080/"+data, "_self")
+}
+</script>
+
+<div id="home" style="position: absolute; top: 50px; height: 100px; width: 250px; right: 100px;"><a href="http://192.168.1.56:8080/playplay.html" target="_self" id="home" class="s11link"><span id="home"><font color="black"; size="7">Home &#8962 </font></span></div></a></div>
+
+</body>
+</html>

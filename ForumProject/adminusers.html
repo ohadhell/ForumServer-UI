@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<title>All Users</title>
+<head>
+
+<link rel="icon" href="favicon.ico" type="image/gif" sizes="16x16">
+</head>
+<body>
+<h2 style="color:black">All Users</h2>
+<iframe style="background: white" src="allusernames.txt" width="500" height="400"></iframe>
+<br>
+<textarea rows="1" cols="50" id="textarea"></textarea>
+<button onclick="myFunction()">Remove User</button><br>
+<br>
+<textarea rows="1" cols="50" id="textarea2"></textarea>
+<button onclick="myFunction2()">Make Him Admin</button><br>
+</body>
+</html>
+
+<script>
+function myFunction() {
+    data=document.getElementById("textarea").value
+	var encodedData = window.btoa(data);
+	window.open("http://192.168.1.56:8080/Admin/remove/"+encodedData, "_self")
+}
+</script>
+<script>
+function myFunction2() {
+    data=document.getElementById("textarea2").value
+	var encodedData2 = window.btoa(data);
+	window.open("http://192.168.1.56:8080/Admin/newadmin/"+encodedData2, "_self")
+}
+</script>
+<div id="home" style="position: absolute; top: 50px; height: 100px; width: 250px; right: 100px;"><a href="http://192.168.1.56:8080/playplay.html" target="_self" id="home" class="s11link"><span id="home"><font color="black"; size="7">Home &#8962 </font></span></div></a></div>
